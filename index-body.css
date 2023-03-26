@@ -94,7 +94,7 @@
 
     width: 80%;
     height: 100%;
-    padding: 0 25px ;
+    padding: 0 20px;
 
     align-items: center;
     /*background: rgba(50, 50, 50, 0.5);*/
@@ -108,58 +108,132 @@
     flex-direction: column;
     align-items: center;
 
-    /*background: rgba(100, 100, 100, 0.5);*/
     width: 100%;
     height: 100%;
 
-
-    /*overflow: hidden;*/
 
 }
 
 #main .contains .contents .name-container {
 /*indexl-login.css 에 만들어둠*/
 }
+
+/*게임박스 3개 css*/
 #main .contains .contents .main-game{
-        width: 100%;
-        height: 100%;
 
-}
-#main .contains .contents .main-game .nav {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
 
-        height: 400px;
-        margin: 50px 5px;
-
-        background: cornflowerblue;
-
-}
-
-#main .contains .contents .main-game .nav .game {
-        width: 80%;
-        height: 100%;
-        border: 1px solid rgb(226, 60, 60);
-}
-
-#main .contains .contents .main-game .bridge{
-}
-
-#main .contains .contents .nav-sub {
-        /*width: 100%;*/
-        /*height: 20%;*/
-
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*align-items: center;*/
-}
-
-#main .contains .contents .nav-sub .btn {
-        height: 100%;
         width: 100%;
+        height: 100%;
+}
+#main .contains .contents .main-game div{
+        display: flex;
+        justify-content: normal;
+        justify-items: end;
 
+}
+
+#main .contains .contents .main-game .game-nav .nav  {
+        /*position: absolute;*/
+
+        display: flex;
+        width: 100%;
+        height: 400px;
+        margin: 40px 0px;
+
+        border-radius: 20px;
+
+}
+
+
+
+#main .contains .contents .main-game .game-nav .nav .game {
+    /*position: absolute;*/
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    border: 1px solid #000;
+    /*border-radius: 20px;*/
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#main .contains .contents .main-game .game-nav .nav .game figure{
+    display: grid;
+    grid-template: "stack";
+
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+
+}
+#main .contains .contents .main-game .game-nav .nav .game figure > * {
+    padding: 0;
+    margin: 0;
+    grid-area: stack;
+}
+#main .contains .contents .main-game .game-nav .nav .game > li {
+    list-style: none;
+}
+
+
+#main .contains .contents .main-game .game-nav .nav .game  figure > img{
+
+    width: 100%;
+    height: 100%;
+
+    /* 사진 사이즈에 따라 바꿔줘야됨*/
+    object-fit: fill;
+}
+
+#main .contains .contents .main-game .game-nav .nav .game  figure > figcaption{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity 1s;
+
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    line-height: 200px;
+}
+#main .contains .contents .main-game .game-nav .nav .game  figure:hover > figcaption{
+    opacity: 1;
+}
+
+    /* button css */
+button{
+    all: unset;
+}
+#main .contains .contents .main-game .game-nav-sub {
+        width: 50%;
+        height: 100px;
+
+        margin-left: 25%;
+        display: flex;
+
+        background: indianred;
+}
+#main .contains .contents .main-game .game-nav-sub .nav-sub{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#main .contains .contents .main-game .game-nav-sub .nav-sub .btn {
+        width: 200px;
+        height: 50%;
+        display: flex;
+        justify-content:space-around;
+        margin: auto;
+        cursor: pointer;
+
+        border: 2px solid #000;
 }
 
 #main .contains .contents .nav-sub .start-btn {
