@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+      
+        .prac {
+            width: 200px;
+            height: 350px;
+            background: yellowgreen;
+            position: absolute;
+            z-index: 100;
+
+
+        }
+
+        .prac2 {
+            width: 200px;
+            height: 350px;
+            background: aqua;
+            position: absolute;
+
+        }
+
+        .prac, .prac2 {
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+        <div class="prac"></div>
+        <div class="prac2"></div>
+
+    
+
+
+    <script>
+        const $prac = document.querySelector('.prac');
+        const $prac2 = document.querySelector('.prac2');
+
+
+        $prac.addEventListener('click', () => {
+            // $prac.style.background = 'aqua';
+            $prac.style.transform = "rotateY(180deg)";
+            $prac2.style.transform = "rotateU(0deg)";
+
+        });
+
+        $prac2.addEventListener('click', () => {
+            // $prac.style.background = 'aqua';
+            $prac.style.transform = "rotateY(0deg)";
+            $prac2.style.transform = "rotateU(-180deg)";
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
